@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let nota1 = 3.5;
+        let nota2 = 4;
+        let nombre = "Andres Ospina";
+        var asignatura = "moviles III";
+        let estado = true;
+
+        //if
+
+        if(estado){
+            console.log(`Su estado es activo y su nombre es: ${nombre}`);
+        }
+
+        //for
+
+        for (let i = 1; i <= 10; i++){
+            if(i % 2 != 0){
+                console.log(`El numero ${i} es impar`);
+            }
+        }
+
+        //while
+
+        let c = 1;
+        while(c <= 10){
+            if(c % 2 == 0){
+                console.log(`El numero ${c} es par`);
+            }
+            c++;
+        }
+
+        disponible = estado ? "Disponible" : "No Disponible";
+
+        console.log(disponible);
+
+        // do .. While
+
+        let x = 11;
+        do{
+            console.log(x);
+            x++;
+        } while (x <= 10);
+
+        // array
+
+        numeros = [1,2,3,4,5,6,7,8,9,10];
+
+        for (let s = 0; s < numeros.length; s++){
+            console.log(numeros[s]);
+        }
+
+        // for ..of: recorrer una lista o vector
+
+        let m = 1;
+        for(numero of numeros){
+            console.log(`El numero del arrary es: ${numero} y hay ${m} numeros en el array`);
+            m++;
+        }
+
+        // Variables tipo objeto
+
+        let datosEmpleado = {"id":1000884746,"nombre":"Juan Pablo","Apellido":"Mona Quintana","Estado":true,"Salario":2500000};
+
+        console.log(datosEmpleado);
+
+        // Mostrar solo el nombre del objeto datosEmpleado
+
+        console.log(`El nombre del empleado es : ${datosEmpleado["nombre"]}`)
+        console.log(`El id del empleado es : ${datosEmpleado["id"]}`)
+        console.log(`El Apellido del empleado es : ${datosEmpleado["Apellido"]}`)
+        console.log(`El Salario del empleado es : ${datosEmpleado["Salario"]}`)
+
+        //Iterar en el objeto datosEmeplados
+
+        for (dato in datosEmpleado){
+            console.log(`${dato}: ${datosEmpleado[dato]}`)
+        }
+
+        // Funciones
+        
+
+        function mensaje(mens){
+            console.log(mens);
+        }
+
+        mensaje("Hola mundo desde la fucnion mensaje, sihabueno");
+
+        function calcular(val1,val2,operador){
+            let resultado;
+            switch(operador){
+
+                case "+": resultado = val1 + val2;
+                break;
+
+                case "-": resultado = val1 - val2;
+                break;
+
+                case "*": resultado = val1 * val2;
+                break;
+
+                case "/": resultado = val1 / val2;
+                break;
+
+                default: resultado = 0;
+                break;
+
+            }
+
+            return resultado;
+        }
+        
+        // Secuencia de fibonacci
+        
+            let valor1 = 0
+            let valor2 = 1
+            let resultado = 0
+            for (let i = 0; i < 20; i++){
+                console.log(resultado)
+                resultado = valor1 + valor2
+                valor2 = valor1;
+                valor1 = resultado;
+            }
+
+
+    </script>
+</head>
+<body>
+    <h1>
+        Manejando js Avanzado
+    </h1>
+</body>
+</html>
